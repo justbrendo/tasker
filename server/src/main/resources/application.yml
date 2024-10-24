@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/test_db
-    username: root
-    password: root
+    url: jdbc:postgresql://localhost:5432/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
   jpa:
     show-sql: true
     hibernate:
@@ -12,13 +12,3 @@ spring:
         globally_quoted_identifiers: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
-  security:
-    oauth2:
-      client:
-        registration:
-          google:
-            client-id: 740945126011-tedfnr3gomsc6ak77g4f8imnbjiohh1u.apps.googleusercontent.com
-            redirect-uri: "{baseUrl}/oauth2/callback/{registrationId}"
-            scope:
-              - email
-              - profile
