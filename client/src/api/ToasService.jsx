@@ -17,7 +17,6 @@ export function toastInfo(message) {
 
 export function toastSuccess(message) {
     toast.success(message, toastConfig);
-    console.log("toaaaaaaaaaaaaaaaaa");
 }
 
 export function toastWarning(message) {
